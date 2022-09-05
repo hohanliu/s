@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo apt-get -y install ibus-chewing gsettings-desktop-schemas
+sudo apt-get -y install ibus-chewing ibus-libzhuyin gsettings-desktop-schemas
 sleep 2
-gsettings set org.freedesktop.ibus.general preload-engines "['xkb:us::eng', 'chewing']"
+gsettings set org.freedesktop.ibus.general preload-engines "['xkb:us::eng', 'libzhuyin', 'chewing']"
 ibus-daemon &
 google-chrome https://chrome.google.com/webstore/detail/line/ophjlpahpchlmihnnnihgmmeilfjmjjc?hl=en
 
